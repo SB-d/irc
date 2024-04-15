@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --font-kanit: 'Kanit', sans-serif;
+}
+
+body {
+    padding-top: 100px; 
+}
+
+/* BARRA DE NAVEGACION */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 90px; /* Has establecido dos veces la altura, quita una. */
+    display: flex;
+    justify-content: space-between; /* Cambiado de space-around a space-between */
+    padding: 0 15px;
+    align-items: center;
+    background-color: #f4f4f4;
+    box-shadow: 1px 2px 12px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo-user {
+    background-color: lightcoral;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-logo-user {
+    /* background-color: lightcoral; */
+    /* width: 100%; */
+    width: 140px;
+    height: 80px;
+    margin: 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* padding: 5px 5px; */
+}
+
+.logo {
+    width: 120px;
+}
+
+/* .back-logo-user h3 {
+    font-size: 25px;
+    color: white;
+} */
+
+/* *********************** */
+/* CONTENEDOR USUARIO */
+.text-image {
+    width: 150px;
+    border-left: 2px solid #696969;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    /* background-color: lightcyan; */
+}
+
+.image-user {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 50%;
+}
+/* CONTENEDOR USUARIO */
+/* *********************** */
+/* BARRA DE NAVEGACION */
+
+
+/* MODAL CAMBIAR Y CERRAR SESIÒN */
+.changePass-logout {
+    background-color: rgb(233, 233, 233);
+    position: absolute;
+    top: 78%;
+    right: 10%;
+    width: 170px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px 8px;
+    gap: 5px;
+    box-shadow: 1px 2px 12px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease;
+
+    /* ANIMACION */
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0; /* Elimina cualquier relleno que pueda agregar espacio adicional */
+    margin: 0; /* Elimina cualquier margen que pueda agregar espacio adicional */
+}
+
+.changePass-logout.open {
+    display: flex;
+    padding: 10px 8px;
+    max-height: 200px; /* Altura máxima que desees para la animación */
+}
+
+.changePass-logout .box {
+    display: flex;
+    /* background-color: lightgreen; */
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.changePass-logout .box:active {
+    background-color: #c9c9c9;
+    border-radius: 8px;
+}
+
+.changePass-logout .box p {
+    font-size: 14px;
+}
+
+.changePass-logout img {
+    width: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.icon-logout {
+    cursor: pointer;
+}
+
+/* Icono girado hacia arriba */
+.rotate {
+    transform: rotate(180deg); /* Ajusta el ángulo de rotación según sea necesario */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+/* MODAL CAMBIAR Y CERRAR SESIÒN */
+
+/* BACKGROUND  */
+.background {
+    position: relative;
+    margin-top: -9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 850px;
+    width: 100%;
+    z-index: 1;
+    padding: 0 10px;
+}
+
+.background .welcome-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(37, 141, 238, 0.384); /* Azul con transparencia */
+    z-index: -1;
+}
+
+/* Tus otros estilos... */
+
+
+.background p {
+    color: #f4f4f4;
+    font-size: 2rem;
+    font-family: var(--font-kanit);
+    margin-top: 10px;
+}
+
+.background h1 {
+    font-family: var(--font-kanit);
+    color: #ffff;
+    font-weight: bold;
+    font-size: 2rem;
+}
+/* BACKGROUND  */
+
+/* SERVICIOS */
+.services {
+    margin: 15px 10px;
+    height: 100vh;
+    padding: 40px;
+    padding: 10px 10px;
+    /* background-color: rgb(40, 42, 43); */
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 350px;
+    width: 100%;
+}
+
+.card {
+    /* background: rgb(0,212,255);
+    background: linear-gradient(100deg, rgba(0,212,255,1) 0%, rgba(240,240,240,1) 100%); */
+    background-color: #e4e4e4;
+    /* border-radius: 10px; */
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 12px 3px rgba(0, 0, 0, 0.2);
+    height: 150px;
+    width: auto;
+    gap: 15px;
+}
+
+
+
+.card p {
+    font-size: 18px;
+    font-family: var(--font-kanit);
+    font-weight: bold;
+    color: black;
+}
+
+.card img {
+    width: 50px;
+}
+
+@media (min-width: 768px) {
+    nav {
+        height: 70px;
+    }
+
+    .background {
+        height: 550px;
+        margin-top: -30px;
+    }
+
+    .background h1 {
+        font-size: 3rem;
+    }
+
+    .services {
+        height: auto;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 300px;
+    }
+}
+/* SERVICIOS */
+
+
+/* FUNCIONES */
+.back-functions {
+    /* background-color: lightblue; */
+    margin: 0 2px;
+    padding: 0 12px;
+}
+
+.views {
+    display: flex;
+    height: 70px;
+    /* background-color: lightcoral; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.views button {
+    width: 120px;
+    height: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    background-color: transparent;
+    font-family: var(--font-kanit);
+}
+
+/* BOTONES ABAJO */
+.views button:nth-child(2), .views button:nth-child(3), .views button:nth-child(4) {
+    gap: 5px;
+}
+
+.views img {
+    width: 20px;
+}
+
+.tab {
+    overflow: hidden;
+}
+
+.tab button {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab button:hover {
+    border-bottom: 3px solid #555;
+}
+
+.tab button.active {
+    border-bottom: 3px solid #555;
+}
+
+.tab-content {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.active-tab {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .views button {
+        width: 130px;
+        font-size: 12px;
+    }
+
+    .views img {
+        width: 25px;
+    }
+}
+
+.all-functions {
+    width: 100%;
+    height: 150px;
+    /* margin: 0 10px; */
+    padding: 0 5px;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* FUNCIONES */

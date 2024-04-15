@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --font-kanit: 'Kanit', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,80,152);
+    background: linear-gradient(98deg, rgba(0,80,152,1) 0%, rgba(67,160,240,1) 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 550px;
+    /* background-color: lightyellow; */
+    margin: 50px 20px;
+}
+
+.back-picture {
+    width: auto;
+}
+
+.back-picture img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.login {
+    background-color: #ffff;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 0;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.login img {
+    width: 180px;
+    margin-top: 20px;
+}
+
+.user-password {
+    display: flex;
+    flex-direction: column;
+    /* background-color: lightcoral; */
+    width: 300px;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.user-password img {
+    width: 20px;
+}
+
+.user-password .input-user, 
+.input-password {
+    display: flex;
+    justify-content: start;
+    /* background-color: lightcoral; */
+    align-items: center;
+    width: 130px;
+    gap: 10px;
+}
+
+.user-password .input-user img, 
+.input-password img {
+    margin-top: -8px;
+}
+
+.user-password input {
+    width: 290px;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin-top: -15px;
+}
+
+.user-password label {
+    font-weight: bold;
+}
+
+/* CONTRASEÑA OLVIDADA */
+.pass-forget {
+    margin-top: -10px;
+}
+
+.back-btn button {
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #005098;
+    border: none;
+    color: white;
+    font-family: var(--font-kanit);
+    cursor: pointer;
+}
+
+.back-btn button:active {
+    transform: scale(.98);
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .login {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .back-picture img {
+        object-fit: cover;
+        height: 390px;
+    }
+
+    .back-picture img {
+        border-top-right-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .back-picture img {
+        object-fit: cover;
+        height: 460px;
+    }
+
+    .login {
+        height: 450px;
+    }
+
+    
+    .pass-forget {
+        margin-top: -50px;
+    }
+}

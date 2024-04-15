@@ -26,6 +26,9 @@ Route::get('/rp', function () {
     return view('reportes.excel');
 });
 
+//Detalles
+Route::get('/detalles', [App\Http\Controllers\DetailsController::class, 'index'])->name('detalles');
+
 
 //ROLE CRUD
 Route::get('/roles', [RolController::class, 'index'])->name('indexRol');
